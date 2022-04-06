@@ -1,14 +1,12 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext} from "react";
+import {navContext} from "./nav";
 
 export default function Burger(props: BurgerProps) {
-    const [isActive, setIsActive] = useState(false);
-    useEffect(() => {
-        props.onClick();
-    }, [isActive]);
+    const {isActive, toggle} = useContext(navContext);
 
     return <>
         <button className="fixed group ml-4 outline-0 z-20"
-                onClick={() => setIsActive(prev => !prev)}>
+                onClick={toggle}>
             <div
                 className="relative flex overflow-hidden items-center justify-center w-[32px] h-20 transform transition-all duration-200 ">
                 <div
@@ -34,5 +32,5 @@ export default function Burger(props: BurgerProps) {
 }
 
 export interface BurgerProps {
-    onClick: Function
+    onClick?: Function
 }

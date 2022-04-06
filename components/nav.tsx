@@ -1,10 +1,15 @@
 import Link from "next/link";
-import React, {useState} from "react";
+import React, {createContext, useState} from "react";
 import Image from "next/image";
 import ListElement from "./ListElement";
 import Bar from "./Bar";
 import Burger from "./Burger";
+import {func} from "prop-types";
 
+export const navContext = createContext({
+    isActive: false,
+    toggle: () => {}
+})
 export default function Nav(props: {
     label: string;
 }) {
@@ -28,12 +33,15 @@ export default function Nav(props: {
             label: "Ресурсы"
         }
     ];
-    const reverse = () => {
-        setIsShown(prev => !prev)
+
+    const toggle = () => {
+      setIsShown(prev => !prev);
     }
     return (
         <>
-            <Burger onClick={reverse}/>
+          <navContext.Provider value={{isActive: isShown, toggle: toggle}}>
+            <Burger />
+          </navContext.Provider>
             <nav
                 className={`max-w-sm pt-9 z-10 absolute transform transition-all duration-500 origin-left z-1 ${isShown ? "" : "-translate-x-full"} h-screen w-screen bg-zinc-200`}>
                 <div
