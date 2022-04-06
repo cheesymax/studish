@@ -4,8 +4,7 @@ import Bar from "./Bar";
 
 export default function DefaultLayout(props: DefaultLayoutProps) {
     return <>
-        <div className=" w-screen h-screen">
-
+        <div className=" w-screen h-screen flex flex-col">
             <Nav label={props.label}/>
             <Bar label={"Расписание"}/>
             <div className="relative ">

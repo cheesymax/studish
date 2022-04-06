@@ -34,9 +34,9 @@ export default function Nav(props: {
         <>
             <Burger onClick={() => setIsShown(prev => !prev)}/>
             <nav
-                className={`pt-9 z-10 absolute transform transition-all duration-500 origin-left z-1 ${isShown ? "" : "-translate-x-full"}`}>
+                className={`max-w-sm pt-9 z-10 absolute transform transition-all duration-500 origin-left z-1 ${isShown ? "" : "-translate-x-full"} h-screen w-screen bg-zinc-200`}>
                 <div
-                    className={`menu w-full h-full`}>
+                    className={`menu w-full h-full relative`}>
                     <div className="person grid grid-cols-2 m-6">
                         <h2 className="text-3xl leading-10">Гарри Поттер Джеймсович</h2>
                         <div className="pic w-24  h-24 ml-auto mt-3">
@@ -50,7 +50,7 @@ export default function Nav(props: {
                             links.map(
                                 (link, index) =>
                                     <ListElement key={index}
-                                                 className={"border-b-2 border-gray-500 w-full h-10 hover:bg-slate-100 transition-all duration-300"}>
+                                                 className={"border-b-2 border-gray-500 w-full h-10 hover:bg-slate-300 transition-all duration-300"}>
                                         <Link href={link.href}>
                                             <a>{link.label}</a>
                                         </Link>
