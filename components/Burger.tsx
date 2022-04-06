@@ -7,7 +7,7 @@ export default function Burger(props: BurgerProps) {
     }, [isActive]);
 
     return <>
-        <button className="relative group ml-4 outline-0 z-[2]"
+        <button className="fixed group ml-4 outline-0 z-20"
                 onClick={() => setIsActive(prev => !prev)}>
             <div
                 className="relative flex overflow-hidden items-center justify-center w-[32px] h-20 transform transition-all duration-200 ">

@@ -1,11 +1,16 @@
 import Nav from "./nav";
-import React, {ReactChildren, ReactElement} from "react";
+import React from "react";
+import Bar from "./Bar";
 
 export default function DefaultLayout(props: DefaultLayoutProps) {
     return <>
-        <div className="wrapper w-full h-[10000px]">
+        <div className=" w-screen h-screen">
+
             <Nav label={props.label}/>
-            {props.children}
+            <Bar label={"Расписание"}/>
+            <div className="relative ">
+                {props.children}
+            </div>
         </div>
     </>;
 }
