@@ -3,7 +3,7 @@ import React, {useEffect, useState} from "react";
 export default function Burger(props: BurgerProps) {
     const [isActive, setIsActive] = useState(false);
     useEffect(() => {
-        props.onClick();
+        // props.onClick();
     }, [isActive]);
 
     return <>
