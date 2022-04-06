@@ -12,7 +12,7 @@ export default function Nav(props: {
 
     const links = [
         {
-            href: "/",
+            href: "/plan",
             label: "Учебный план"
         },
         {
@@ -20,11 +20,11 @@ export default function Nav(props: {
             label: "Расписание"
         },
         {
-            href: "/",
+            href: "/marks",
             label: "Оценки"
         },
         {
-            href: "/",
+            href: "/resources",
             label: "Ресурсы"
         }
     ];
