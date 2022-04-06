@@ -28,11 +28,12 @@ export default function Nav(props: {
             label: "Ресурсы"
         }
     ];
-    const btnRef = React.createRef();
-    const menuRef = React.createRef();
+    const reverse = () => {
+        setIsShown(prev => !prev)
+    }
     return (
         <>
-            <Burger onClick={() => setIsShown(prev => !prev)}/>
+            <Burger onClick={reverse}/>
             <nav
                 className={`max-w-sm pt-9 z-10 absolute transform transition-all duration-500 origin-left z-1 ${isShown ? "" : "-translate-x-full"} h-screen w-screen bg-zinc-200`}>
                 <div
