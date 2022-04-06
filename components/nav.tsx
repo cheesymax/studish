@@ -30,18 +30,6 @@ export default function Nav(props: {
     ];
     const btnRef = React.createRef();
     const menuRef = React.createRef();
-    const openMenu = () => {
-        React.constructor(btnRef.current, menuRef.current, {
-            placement: "bottom-start"
-        });
-        setMenuShow(true);
-        console.log("Open");
-
-    };
-    const closeMenu = () => {
-        setMenuShow(false);
-        console.log("close");
-    };
     return (
         <nav className={`fixed`}>
             <Bar label={"Расписание"}/>
