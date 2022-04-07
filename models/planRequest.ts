@@ -1,8 +1,8 @@
-import {IRequestUniversity} from "./IRequestUniversity";
-import {IRequestGroup} from "./IRequestGroup";
-import {IRequestSpeciality} from "./IRequestSpeciality";
+import {IRequireUniversity} from "./IRequireUniversity";
+import {IRequireGroup} from "./IRequireGroup";
+import {IRequireSpeciality} from "./IRequireSpeciality";
 
-export class PlanRequest implements IRequestUniversity, IRequestSpeciality {
+export class PlanRequest implements IRequireUniversity, IRequireSpeciality {
 
     university: string;
     specialityCode: string;
