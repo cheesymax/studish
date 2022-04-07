@@ -1,6 +1,10 @@
 import axios from "axios";
 import {ScheduleRequest} from "../models/scheduleRequest";
 import {PlanRequest} from "../models/planRequest";
+import {AllMArksRequest} from "../models/allMArksRequest";
+import {YearMarksRequest} from "../models/YearMarksRequest";
+import {PeriodMarksRequest} from "../models/PeriodMarksRequest";
+import {SubjectMarksByPeriod} from "../models/SubjectMarksByPeriod";
 
 const HOST = "https://studash-service.herokuapp.com";
 
@@ -42,7 +46,59 @@ const API = {
                 },
             }
         )
-    }
-    };
+    },
+    allMarks: function (requestBody: AllMArksRequest)
+    {
+        return axios.post(
+            `${HOST}/Marks`,
+            requestBody,
+            {
+                method: "POST",
+                headers: {
+                    "Access-Control-Allow-Origin": `${HOST}`,
+                },
+            }
+        )
+    },
+    yearMarks: function (requestBody: YearMarksRequest)
+    {
+        return axios.post(
+            `${HOST}/Marks/Year`,
+            requestBody,
+            {
+                method: "POST",
+                headers: {
+                    "Access-Control-Allow-Origin": `${HOST}`,
+                },
+            }
+        )
+    },
+    periodMarks: function (requestBody: PeriodMarksRequest)
+    {
+        return axios.post(
+            `${HOST}/Marks`,
+            requestBody,
+            {
+                method: "POST",
+                headers: {
+                    "Access-Control-Allow-Origin": `${HOST}`,
+                },
+            }
+        )
+    },
+    subjectMarksByPeriod: function (requestBody: SubjectMarksByPeriod)
+    {
+        return axios.post(
+            `${HOST}/Marks/Subject`,
+            requestBody,
+            {
+                method: "POST",
+                headers: {
+                    "Access-Control-Allow-Origin": `${HOST}`,
+                },
+            }
+        )
+    },
+};
 
 export default API;

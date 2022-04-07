@@ -1,8 +1,8 @@
-import {IRequestDate} from "./IRequestDate";
-import {IRequestUniversity} from "./IRequestUniversity";
-import {IRequestGroup} from "./IRequestGroup";
+import {IRequireDate} from "./IRequireDate";
+import {IRequireUniversity} from "./IRequireUniversity";
+import {IRequireGroup} from "./IRequireGroup";
 
-export class ScheduleRequest implements IRequestGroup, IRequestUniversity, IRequestDate {
+export class ScheduleRequest implements IRequireGroup, IRequireUniversity, IRequireDate {
     constructor(university: string, groupName: string, date?: Date) {
         this.university = university;
         this.groupName = groupName;
