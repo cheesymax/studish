@@ -2,15 +2,14 @@ import {IRequestUniversity} from "./IRequestUniversity";
 import {IRequestGroup} from "./IRequestGroup";
 import {IRequestSpeciality} from "./IRequestSpeciality";
 
-export class PlanRequest implements IRequestUniversity, IRequestGroup, IRequestSpeciality {
-    constructor(groupName: string, university: string, specialityCode: string) {
-        this.groupName = groupName;
+export class PlanRequest implements IRequestUniversity, IRequestSpeciality {
+
+    university: string;
+    specialityCode: string;
+
+    constructor(university: string, specialityCode: string) {
         this.university = university;
         this.specialityCode = specialityCode;
     }
-
-    groupName: string;
-    university: string;
-    specialityCode: string;
 
 }
