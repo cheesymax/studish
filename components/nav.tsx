@@ -43,7 +43,7 @@ export default function Nav(props: {
             <Burger />
           </navContext.Provider>
             <nav
-                className={`max-w-sm pt-9 z-10 absolute transform transition-all duration-500 origin-left z-1 ${isShown ? "" : "-translate-x-full"} h-screen w-screen bg-zinc-200`}>
+                className={`max-w-lg pt-10 z-10 fixed transform transition-all duration-500 origin-left z-1 ${isShown ? "" : "-translate-x-full"} h-screen w-screen bg-zinc-200`}>
                 <div
                     className={`menu w-full h-full relative`}>
                     <div className="person grid grid-cols-2 m-6">
