@@ -7,7 +7,7 @@ export default function DefaultLayout(props: DefaultLayoutProps) {
         <div className=" w-screen h-screen flex flex-col">
             <Nav label={props.label}/>
             <Bar label={props.label}/>
-            <div className="relative top-14 mt-6">
+            <div className="relative top-20 mt-6">
                 {props.children}
             </div>
         </div>

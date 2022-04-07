@@ -5,7 +5,7 @@ export default function Burger(props: BurgerProps) {
     const {isActive, toggle} = useContext(navContext);
 
     return <>
-        <button className="fixed group ml-4 outline-0 z-20"
+        <button className="fixed group ml-4 outline-0 z-30"
                 onClick={toggle}>
             <div
                 className="relative flex overflow-hidden items-center justify-center w-[32px] h-20 transform transition-all duration-200 ">

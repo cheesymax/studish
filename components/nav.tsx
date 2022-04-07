@@ -2,9 +2,7 @@ import Link from "next/link";
 import React, {createContext, useState} from "react";
 import Image from "next/image";
 import ListElement from "./ListElement";
-import Bar from "./Bar";
 import Burger from "./Burger";
-import {func} from "prop-types";
 
 export const navContext = createContext({
     isActive: false,
@@ -43,10 +41,10 @@ export default function Nav(props: {
             <Burger />
           </navContext.Provider>
             <nav
-                className={`max-w-lg pt-10 z-10 fixed transform transition-all duration-500 origin-left z-1 ${isShown ? "" : "-translate-x-full"} h-screen w-screen bg-zinc-200`}>
+                className={`max-w-lg pt-10 z-20 fixed transform transition-all duration-500 origin-left z-1 ${isShown ? "" : "-translate-x-full"} h-screen w-screen bg-zinc-200`}>
                 <div
                     className={`menu w-full h-full relative`}>
-                    <div className="person grid grid-cols-2 m-6">
+                    <div className="person grid grid-cols-2 m-4 mt-12">
                         <h2 className="text-3xl leading-10">Гарри Поттер Джеймсович</h2>
                         <div className="pic w-24  h-24 ml-auto mt-3">
                             <Image src="/img.png" alt="me" width="128" height="128" className="rounded-full"/>

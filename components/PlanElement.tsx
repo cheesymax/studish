@@ -1,7 +1,4 @@
-import React, {useState} from "react";
-import exp from "constants";
-import {resolveSrv} from "dns";
-import {IPlanModel} from "../models/IPlanModel";
+import React from "react";
 import {Year} from "../models/Year";
 import PeriodElement from "./PeriodElement";
 
@@ -25,22 +22,8 @@ export function List(props: {
 
 export default function PlanElement(props: TermElementProps){
     return(
-        <li className={'w-11/12'}>
-            {/*<p className={'text-2xl'}>{props.data} {props.type}</p>*/}
-            {/*<div className={'mt-2 text-[18px]'}>*/}
-            {/*        <div>*/}
-            {/*            {*/}
-            {/*                props.subjects.map(*/}
-            {/*                    (item, index) =>*/}
-            {/*                        <List subjectName={item.subjectName}*/}
-            {/*                              key={index}*/}
-            {/*                              hours={item.hours}*/}
-            {/*                              examType={item.examtype} className={'grid grid-cols-5 items-center w-full h-auto odd:bg-gray-200 first:rounded-t-2xl last:rounded-b-2xl'}/>*/}
-            {/*                )*/}
-            {/*            }*/}
-            {/*        </div>*/}
-            {/*</div>*/}
-            <p className={'text-2xl text-center p-6 font-medium'}>{props.data.number} год</p>
+        <li className={'w-11/12 pb-6'}>
+            <p className={'text-2xl text-center pb-6 font-medium'}>{props.data.number} год</p>
                 <div className={''}>
                     {
                         props.data.periods.map((item, index) =>

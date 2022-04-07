@@ -14,7 +14,7 @@ export default function PeriodElement(props: SemestrProps){
                     props.data.subjects.map((item, index) =>
                             <SubjectElement key={index}
                                             data={item}
-                                            className={'grid grid-cols-7 divide-x-2  px-6 divide-gray-300 items-center w-full h-auto py-3 even:bg-white last:rounded-b-2xl'}/>
+                                            className={'grid grid-cols-7 divide-x-2  px-6 divide-gray-300 items-center w-full h-auto py-3 even:bg-white even:border-2 last:rounded-b-2xl'}/>
                     )
                 }
             </div>
