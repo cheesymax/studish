@@ -52,7 +52,7 @@ export default function Nav(props: {
                         <p className="mt-2">Мальчик, который выжил</p>
                     </div>
 
-                    <ul className="flex flex-col justify-between w-3/6 h-2/5 text-2xl ml-6 mt-12">
+                    <ul className="flex flex-col justify-between w-3/6 h-2/5 text-2xl ml-4 mt-12">
                         {
                             links.map(
                                 (link, index) =>
