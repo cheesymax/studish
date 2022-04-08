@@ -13,19 +13,15 @@ export default function MarksElement(props: {
     }, []);
 
     return (
-        <div className={props.className}>
+        <li className={props.className}>
+
             <div className={'col-span-4 mr-2'}>
-                <p>{props.data.exam_name}</p>
-                {/*<p className={'text-sm opacity-70'}>{props.data.teacher}</p>*/}
+                <p>{props.data.subject}</p>
             </div>
-            <div>
-                <p>Оценка</p>
-                <p className={'col-span-1 col-end-6 text-center'}>{props.data.current_mark}ч</p>
-                </div>
-             <div>
-                 <p>Макс.балл</p>
-                 <p className={'col-span-2 col-end-8 text-center'}>{props.data.max_mark}</p>
-            </div>
-        </div>
+            {/*<div className={'w-[2px] h-4 bg-black shrink-0 rounded-2xl'}/>*/}
+            <p className={'col-span-1 col-end-6 text-center'}>{props.data.current_mark}ч</p>
+            {/*<div className={'w-[2px] h-4 bg-black shrink-0 rounded-2xl'}/>*/}
+            <p className={'col-span-2 col-end-8 text-center'}>{props.data.max_mark}</p>
+        </li>
     )
 }

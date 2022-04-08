@@ -46,13 +46,15 @@ export default function Marks() {
 
     return <>
         <DefaultLayout label={"Оценки"}>
-            <div className={"flex w-full h-full flex-col justify-around content-around items-center"}>
+            <div className={"flex w-screen h-full flex-col justify-around content-around items-center"}>
                     <SwitchPeriod min={1} max={marks.length} current={num} periodName={'семестр'} callback={(value) => setNum(value)}/>
-                {
+                <ul>{
                     //rend()
                     marks.map((item, index) =>
-                        <MarksElement key={index} data={item}/>)
-                }
+                        <MarksElement key={index}
+                                      data={item}
+                                      className={"grid grid-cols-7 divide-x-2 first:rounded-t-2xl last:rounded-b-2xl px-6 divide-gray-300 items-center w-full h-auto py-3 odd:bg-gray-200 even:border-2"}/>)
+                }</ul>
 
             </div>
         </DefaultLayout>
