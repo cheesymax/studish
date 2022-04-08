@@ -47,10 +47,11 @@ export default function Marks() {
     return <>
         <DefaultLayout label={"Оценки"}>
             <div className={"flex w-full h-full flex-col justify-around content-around items-center"}>
-                    <SwitchPeriod min={1} max={marks.length} current={num} periodName={'семестр'} callback={setNum}/>
+                    <SwitchPeriod min={1} max={marks.length} current={num} periodName={'семестр'} callback={(value) => setNum(value)}/>
                 {
-                    rend()
-
+                    //rend()
+                    marks.map((item, index) =>
+                        <MarksElement key={index} data={item}/>)
                 }
 
             </div>
