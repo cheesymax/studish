@@ -7,6 +7,7 @@ import {IScheduleModel} from "../models/IScheduleModel";
 
 export default function Schedule() {
     const [schedule, setSchedule] = useState<IScheduleModel[]>([]);
+    const [isScheduleLoaded, setIsScheduleLoaded] = useState(false);
     useEffect(() => {
         let requestBody: ScheduleRequest;
         requestBody = new ScheduleRequest(
@@ -19,12 +20,15 @@ export default function Schedule() {
                 setSchedule(response.data);
             })
             .catch(reason => console.error(reason));
-        return() => {}
     }, []);
+    useEffect(() => {
+        setIsScheduleLoaded(true);
+    }, [schedule]);
+
     return <>
         <DefaultLayout label={"Расписание"}>
             <div className={"flex w-full h-full flex-col justify-around content-around items-center"}>
-                <p className={`w-11/12 text-2xl`}>ПН 04.05</p>
+                <p className={`w-11/12 text-2xl`}>ПН 05.04</p>
                 <ul className={`w-11/12`}>
                     {
                         schedule.map(

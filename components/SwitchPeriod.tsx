@@ -13,8 +13,9 @@ export function SwitchPeriod(props: SwitchPeriodProps){
         },
         [periodNumber],
     );
+
     return (
-        <div className={'w-60 flex justify-around'}>
+        <div className={'w-60 flex justify-around pb-6'}>
             <ArrowBtn isDisabled={periodNumber === minValue} className={'rotate-180'} onClick={() => {setPeriodNumber(prevState => prevState - 1)}}/>
             <p>{periodNumber} {props.periodName}</p>
             <ArrowBtn isDisabled={periodNumber === maxValue} onClick={() => {setPeriodNumber(prevState => prevState + 1)}}/>

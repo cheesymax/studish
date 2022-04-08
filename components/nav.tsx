@@ -57,7 +57,7 @@ export default function Nav(props: {
                             links.map(
                                 (link, index) =>
                                     <ListElement key={index}
-                                                 className={"border-b-2 border-gray-500 w-full h-10 hover:bg-slate-300 transition-all duration-300"}>
+                                                 className="hover:border-b-[1.5px] hover:border-sky-600 w-fit h-10 transition-all duration-300">
                                         <Link href={link.href}>
                                             <a>{link.label}</a>
                                         </Link>
