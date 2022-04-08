@@ -6,9 +6,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      gridTemplateColumns: {
-        '2' : '1fr 1.5fr',
-      }
+
     },
   },
   plugins: [],

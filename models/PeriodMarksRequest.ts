@@ -1,10 +1,17 @@
-import {YearMarksRequest} from "./YearMarksRequest";
 import {IRequirePeriod} from "./IRequirePeriod";
+import {IRequireGroup} from "./IRequireGroup";
+import {IRequireStudent} from "./IRequireStudent";
 
-export class PeriodMarksRequest extends YearMarksRequest implements IRequirePeriod {
-    constructor(university: string, groupName: string, fullName: string, year: number, period: number) {
-        super(university, groupName, fullName, year);
+export class PeriodMarksRequest implements IRequirePeriod, IRequireGroup, IRequireStudent {
+    fullName: string;
+    groupName: string;
+    university: string;
+    period: number;
+
+    constructor(fullName: string, groupName: string, university: string, period: number) {
+        this.fullName = fullName;
+        this.groupName = groupName;
+        this.university = university;
         this.period = period;
     }
-    period: number;
 }

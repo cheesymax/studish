@@ -76,7 +76,7 @@ const API = {
     periodMarks: function (requestBody: PeriodMarksRequest)
     {
         return axios.post(
-            `${HOST}/Marks`,
+            `${HOST}/Marks/Period`,
             requestBody,
             {
                 method: "POST",
