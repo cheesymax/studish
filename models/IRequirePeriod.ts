@@ -1,5 +1,4 @@
-import {IRequireYear} from "./IRequireYear";
 
-export interface IRequirePeriod extends IRequireYear{
+export interface IRequirePeriod{
     period: number
 }
