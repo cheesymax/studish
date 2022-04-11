@@ -19,7 +19,7 @@ export default function MarksElement(props: {
                 <p>{props.data.subject}</p>
             </div>
             {/*<div className={'w-[2px] h-4 bg-black shrink-0 rounded-2xl'}/>*/}
-            <p className={'col-span-1 col-end-6 text-center'}>{props.data.current_mark}ч</p>
+            <p className={'col-span-1 col-end-6 text-center'}>{props.data.current_mark}</p>
             {/*<div className={'w-[2px] h-4 bg-black shrink-0 rounded-2xl'}/>*/}
             <p className={'col-span-2 col-end-8 text-center'}>{props.data.max_mark}</p>
         </li>
