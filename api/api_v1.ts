@@ -8,6 +8,9 @@ import {SubjectMarksByPeriod} from "../models/SubjectMarksByPeriod";
 
 // const HOST = "https://studash-service.herokuapp.com";
 const HOST = "https://d17e-37-112-0-81.ngrok.io";
+const HEADERS = {
+                    "Access-Control-Allow-Origin": "*", // allow any origin
+                }
 
 const API = {
     scheduleOnDay:function(requestBody:ScheduleRequest) {
@@ -16,9 +19,7 @@ const API = {
             requestBody,
             {
                 method: "POST",
-                headers: {
-                    "Access-Control-Allow-Origin": `${HOST}`,
-                },
+                headers: HEADERS,
             }
         )
     },
@@ -29,9 +30,7 @@ const API = {
             requestBody,
             {
                 method: "POST",
-                headers: {
-                    "Access-Control-Allow-Origin": `${HOST}`,
-                },
+                headers: HEADERS,
             }
         )
     },
@@ -42,9 +41,7 @@ const API = {
             requestBody,
             {
                 method: "POST",
-                headers: {
-                    "Access-Control-Allow-Origin": `${HOST}`,
-                },
+                headers: HEADERS,
             }
         )
     },
@@ -55,9 +52,7 @@ const API = {
             requestBody,
             {
                 method: "POST",
-                headers: {
-                    "Access-Control-Allow-Origin": `${HOST}`,
-                },
+                headers: HEADERS,
             }
         )
     },
@@ -68,9 +63,7 @@ const API = {
             requestBody,
             {
                 method: "POST",
-                headers: {
-                    "Access-Control-Allow-Origin": `${HOST}`,
-                },
+                headers: HEADERS,
             }
         )
     },
@@ -81,9 +74,7 @@ const API = {
             requestBody,
             {
                 method: "POST",
-                headers: {
-                    "Access-Control-Allow-Origin": `${HOST}`,
-                },
+                headers: HEADERS,
             }
         )
     },
@@ -94,9 +85,7 @@ const API = {
             requestBody,
             {
                 method: "POST",
-                headers: {
-                    "Access-Control-Allow-Origin": `${HOST}`,
-                },
+                headers: HEADERS,
             }
         )
     },
