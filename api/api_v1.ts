@@ -7,7 +7,7 @@ import {PeriodMarksRequest} from "../models/PeriodMarksRequest";
 import {SubjectMarksByPeriod} from "../models/SubjectMarksByPeriod";
 
 // const HOST = "https://studash-service.herokuapp.com";
-const HOST = "https://c61f-37-112-0-81.ngrok.io";
+const HOST = "https://d17e-37-112-0-81.ngrok.io";
 
 const API = {
     scheduleOnDay:function(requestBody:ScheduleRequest) {
